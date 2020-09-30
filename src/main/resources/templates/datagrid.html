@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <h4 id="grid1Label">
+  	Employee Work days per project
+</h4>
+<table role="grid"
+       aria-labelledby="grid1Label"
+       class="data">
+  <tbody>
+    <tr>
+      <th>Employee ID </th>
+      <th>Project ID</th>
+      <th>Days on project</th>
+    </tr>	
+    <tr  th:each="employee : ${employees}">
+      <td tabindex="-1"  th:text="${employee.empId}">&nbsp;></td>
+      <td tabindex="-1"  th:text="${employee.projectId}">&nbsp;></td>
+      <td tabindex="-1"  th:text="${employee.timeInProject}">&nbsp;></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

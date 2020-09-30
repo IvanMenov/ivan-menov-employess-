@@ -1,0 +1,6 @@
+1. Start up the application as pure java app or as a spring boot app.
+2. Access localhost:8080/index.html
+3. Try to upload a text file with size less than 200MB.
+5. The output is a table with the column : Employee ID, Project ID, days he worked on that project
+6. Once the text is parsed successfully and there are no exceptions, the console should list the
+pair of colleagues working together on a project for the longest time.
