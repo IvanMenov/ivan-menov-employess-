@@ -46,6 +46,5 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 			return cause;
 		}
 
-		
 	}
 }

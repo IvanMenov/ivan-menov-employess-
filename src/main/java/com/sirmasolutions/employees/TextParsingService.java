@@ -72,10 +72,15 @@ public class TextParsingService {
 		List<Employee> listLongestWorkingTogether=  new ArrayList<Employee>();
 		mapPrjWithEmployees.forEach((projectId,listEmployeesForProject) ->{
 			if(listEmployeesForProject.size() >=2) {
+				//if the listLongestWorkingTogether is empty just add the last 2 employees, 
+				//since the listEmployeesForProject is ordered according to the employee's timeInProject
+				
 				if(listLongestWorkingTogether.isEmpty()) {
 					listLongestWorkingTogether.add(listEmployeesForProject.get(listEmployeesForProject.size()-1));
 					listLongestWorkingTogether.add(listEmployeesForProject.get(listEmployeesForProject.size()-2));
 				}else {
+					//otherwise sum the time employees spend together and put the 
+					//put the employees with the highest time spent in the list
 					long time1 = listLongestWorkingTogether.get(0).getTimeInProject() 
 							+listLongestWorkingTogether.get(1).getTimeInProject();
 					long time2 = listEmployeesForProject.get(listEmployeesForProject.size()-1).getTimeInProject()+
